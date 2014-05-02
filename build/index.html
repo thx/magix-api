@@ -10,23 +10,23 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
     <title>Magix API</title>
     <link rel="stylesheet" type="text/css" href="http://a.tbcdn.cn/apps/e/brix/1.0/brix-min.css" />
-    <link rel="stylesheet" type="text/css" href="build/apiapp/assets/global.css" />
-    <link rel="stylesheet" type="text/css" href="build/apiapp/assets/blue.css" />
+    <link rel="stylesheet" type="text/css" href="apiapp/assets/global.css" />
+    <link rel="stylesheet" type="text/css" href="apiapp/assets/blue.css" />
 </head>
 <body>
     <div id="magix_vf_root"></div>
     <div class="app_progress_bar" id="magix_percent"></div>
-    <script type="text/javascript" src="http://g.tbcdn.cn/kissy/k/1.4.2/seed-min.js"></script>
-    <script type="text/javascript" src="kissy-magix-min.js"></script>
-    <script type="text/javascript" src="build/apiapp/progress-min.js"></script>
-    <script type="text/javascript" src="build/apiapp/crox-min.js"></script>
+    <script type="text/javascript" src="http://g.tbcdn.cn/kissy/k/1.4.2/seed.js"></script>
+    <script type="text/javascript" src="/magix/dist/1.2/kissy-magix-min.js"></script>
+    <script type="text/javascript" src="apiapp/progress.js"></script>
+    <script type="text/javascript" src="apiapp/crox.js"></script>
     <script type="text/javascript">
     KISSY.use('magix/magix,ua',function(S,Magix,UA){
         S.config({
             packages:[{
                 name:'apiapp',
                 tag:'20131028174850',
-                path:'./build/'
+                path:'./'
             }]
         });
         UA.mobile=true;
@@ -39,7 +39,7 @@
             defaultView:'apiapp/'+views+'/default',
             defaultPathname:'/home',
             extensions:exts,
-            apiPath:'./build/',
+            apiPath:'./',
             execError:function(e){
                 if (Math.random()<0.5) {
                     new Image().src='http://gm.mmstat.com/ued.1.1.2?'+[

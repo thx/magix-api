@@ -1,0 +1,1 @@
+KISSY.add("apiapp/views/partials/class",function(a,b,c){return b.extend({template:'magix view content <vframe mx-view="apiapp/views/partials/search"></vframe>',render:function(){var a=this;a.setViewHTML(a.template);c.searchInfos("setviewhml",function(a,b){},a)}})},{requires:["mxext/view","apiapp/models/manager"]});

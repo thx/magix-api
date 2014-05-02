@@ -1,0 +1,1 @@
+KISSY.add("apiapp/views/partials/search-result",function(a,b){return b.extend({template:'<div style="background-color:#fff"> </div>',render:function(){this.setViewHTML(this.template)},showResults:function(a,b){}})},{requires:["mxext/view"]});

@@ -1,0 +1,1 @@
+KISSY.add("apiapp/helpers/crox",function(a,b){var c=b.cache();return{render:function(a,b){if(!window.Crox)throw new Error("please import Crox");var d=c.get(a);return d||(d=new window.Crox(a),d=d.genJsFn(),c.set(a,d)),d(b||{})}}},{requires:["magix/magix"]});

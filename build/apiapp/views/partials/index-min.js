@@ -1,0 +1,1 @@
+KISSY.add("apiapp/views/partials/index",function(a,b){return b.extend({template:"随便来些内容吧",render:function(){this.setViewHTML(this.template)}})},{requires:["mxext/view"]});
