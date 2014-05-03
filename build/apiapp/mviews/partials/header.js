@@ -64,7 +64,7 @@ KISSY.add('apiapp/mviews/partials/header', function(S, View, Crox, MM, Magix) {
         },
         'search<click,keydown>': function(e) {
             if (e.type == 'keydown') {
-                if (e.domEvent.keyCode == 13) {
+                if (e.keyCode == 13) {
                     this.search();
                 }
             } else {
