@@ -3,7 +3,6 @@
  */
 KISSY.add('apiapp/models/manager', function(S, MManager, Model, Magix) {
     var MM = MManager.create(Model, ['cKeys']);
-    window.$M = MM;
     var InfosCache = Magix.cache();
     var SearchCache = Magix.cache(40);
     var ColorKeywords = function(name) {

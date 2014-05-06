@@ -51,6 +51,10 @@ KISSY.add('apiapp/mviews/partials/header', function(S, View, Crox, MM, Magix) {
         },
         'toggleMenu<click>': function(e) {
             var menu = S.one('.menu-extended');
+            if (!menu) {
+                this.$dropShown = false;
+                return;
+            }
             var height = menu.height();
             if (!height) {
                 var h = (e.params.ver == '1.0' || e.params.ver == '1.1') ? 234 : 280;
