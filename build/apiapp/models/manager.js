@@ -3,6 +3,7 @@
  */
 KISSY.add('apiapp/models/manager', function(S, MManager, Model, Magix) {
     var MM = MManager.create(Model, ['cKeys']);
+    window.$M = MM;
     var InfosCache = Magix.cache();
     var SearchCache = Magix.cache(40);
     var ColorKeywords = function(name) {
@@ -14,9 +15,12 @@ KISSY.add('apiapp/models/manager', function(S, MManager, Model, Magix) {
         cache: true,
         cKeys: function() {
             var ai = Magix.local('APIPathInfo');
-            return [ai.loader, ai.ver].join('_');
+            return {
+                loader: ai.loader,
+                ver: ai.ver
+            };
         },
-        after: function(m) {
+        done: function(m) {
             var list = m.get('list');
             var coreList = [];
             var extList = [];
@@ -37,7 +41,7 @@ KISSY.add('apiapp/models/manager', function(S, MManager, Model, Magix) {
     }, {
         name: 'Class_Entity',
         cache: true,
-        after: function(m) {
+        done: function(m) {
             var isa = m.get('isa');
             if (isa == 'CONSTRUCTOR') {
                 m.set('isClass', true);
