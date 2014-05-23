@@ -6,7 +6,7 @@ KISSY.add('apiapp/mviews/default', function(S, View, Magix, VOM) {
         index: 1,
         search: 1
     };
-     return View.extend({template:"<div id=header> <vframe mx-view=\"apiapp/mviews/partials/header\"></vframe> </div> <div style=\"margin-top: 50px;\"> <vframe id=magix_vf_main>哥正在用绳命加载，请稍候哦...</vframe> </div> <vframe mx-view=\"apiapp/mviews/partials/footer\" id=magix_vf_footer></vframe>",
+     return View.extend({template:"<div id=\"header\">\r\n\t<vframe mx-view=\"apiapp/mviews/partials/header\"></vframe>\r\n</div>\r\n<div style=\"margin-top: 50px;\">\r\n\t<vframe id=\"magix_vf_main\">哥正在用绳命加载，请稍候哦...</vframe>\r\n</div>\r\n<vframe mx-view=\"apiapp/mviews/partials/footer\" id=\"magix_vf_footer\"></vframe>",
         init: function() {
             this.observeLocation({
                 path: true

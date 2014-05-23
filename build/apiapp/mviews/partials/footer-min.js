@@ -1,1 +1,1 @@
-KISSY.add("apiapp/mviews/partials/footer",function(a,b){return b.extend({template:"<div id=footer>Copyright, <span class=belong>xinglie.lkf@taobao.com</span></div>",render:function(){var a=this;a.setViewHTML(a.id,a.template)}})},{requires:["magix/view"]});
+KISSY.add("apiapp/mviews/partials/footer",function(a,b){return b.extend({template:'<div id="footer">Copyright, <span class="belong">xinglie.lkf@taobao.com</span></div>',render:function(){var a=this;a.setViewHTML(a.id,a.template)}})},{requires:["magix/view"]});
