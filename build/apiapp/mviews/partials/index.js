@@ -6,11 +6,12 @@ KISSY.add('apiapp/mviews/partials/index', function(S, View, MM, Crox, Magix) {
         render: function() {
             var me = this;
             var r = MM.fetchClassInfos(me);
+            console.log(r);
             r.next(function(err, info) {
                 if (err) {
                     me.setViewHTML(me.id, err.msg);
                 } else {
-                    this.fetchAll({
+                    r.fetchAll({
                         name: 'Class_List'
                     }, function(e, m) {
                         if (e) {

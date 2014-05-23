@@ -114,24 +114,26 @@ KISSY.add('apiapp/models/manager', function(S, MManager, Model, Magix) {
                 }
             });
             r.next(function(e, results) {
-                if (e) return r.doNext([e, results]);
-                r.fetchAll(results, function(e) {
-                    if (!e) {
-                        var args = arguments;
-                        var map = {};
-                        var list = [];
-                        for (var i = args.length - 1; i > 0; i--) {
-                            map[args[i].get('cName')] = args[i];
-                            list.push(args[i]);
+                console.log(e, results);
+                if (!e) {
+                    return r.fetchAll(results, function(e) {
+                        if (!e) {
+                            var args = arguments;
+                            var map = {};
+                            var list = [];
+                            for (var i = args.length - 1; i > 0; i--) {
+                                map[args[i].get('cName')] = args[i];
+                                list.push(args[i]);
+                            }
+                            var result = {
+                                map: map,
+                                list: list
+                            };
+                            InfosCache.set(key, result);
+                            return result;
                         }
-                        var result = {
-                            map: map,
-                            list: list
-                        };
-                        InfosCache.set(key, result);
-                        return result;
-                    }
-                });
+                    });
+                }
             });
             return r;
         },
