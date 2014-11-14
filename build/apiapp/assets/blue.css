@@ -48,7 +48,7 @@ h3, .menu-t {
 div#sidebar {
   background: #fff;
   position: fixed;
-  top: 0; left: 0; bottom: 0;
+  top: 28px; left: 0; bottom: 0;
   width: 200px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -86,8 +86,8 @@ a.toc_title, a.toc_title:visited {
             text-decoration: underline;
           }
 div.container {
-  width: 750px;
-  margin: 40px 0 50px 260px;
+  max-width: 750px;
+  margin: 60px 0 50px 260px;
 }
 .xmark{padding:1px 2px;}
 sup{cursor: default;}
